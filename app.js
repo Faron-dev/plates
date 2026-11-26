@@ -1,5 +1,5 @@
 "use strict";
-const STANDALONE = true, BUILD_ID = "d8a90cb380";
+const STANDALONE = true, BUILD_ID = "1d7df10a87";
 /* ---------- reference data: muscles, exercises, built-in program ---------- */
 const MUSCLES = [
   ['biceps', 'Biceps'], ['calves', 'Calves'], ['sideDelts', 'Lateral delts'], ['rearDelts', 'Rear delts'], ['abs', 'Abs'],

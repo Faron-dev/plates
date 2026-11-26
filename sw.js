@@ -1,9 +1,9 @@
 /* Plates offline cache. The build fills in the version and the file list.
    Everything the app needs is copied into the cache when this installs, so it opens with no connection.
    A new version installs in the background and takes over the next time the app starts, or when the page asks. */
-const BUILD = 'd8a90cb380';
+const BUILD = '1d7df10a87';
 const CACHE = 'plates-' + BUILD;
-const ASSETS = ["./","app.css?v=d8a90cb380","app.js?v=d8a90cb380","manifest.webmanifest","icon-192.png","big-shoulders-display-latin-800-normal.woff2","big-shoulders-display-latin-900-normal.woff2","barlow-latin-400-normal.woff2","barlow-latin-500-normal.woff2","barlow-latin-600-normal.woff2","barlow-latin-700-normal.woff2"];
+const ASSETS = ["./","app.css?v=1d7df10a87","app.js?v=1d7df10a87","manifest.webmanifest","icon-192.png","big-shoulders-display-latin-800-normal.woff2","big-shoulders-display-latin-900-normal.woff2","barlow-latin-400-normal.woff2","barlow-latin-500-normal.woff2","barlow-latin-600-normal.woff2","barlow-latin-700-normal.woff2"];
 
 self.addEventListener('install', ev => {
   ev.waitUntil(caches.open(CACHE).then(cache => Promise.all(ASSETS.map(u =>
