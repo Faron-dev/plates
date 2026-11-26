@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Plates</title>
+<meta name="description" content="Workout tracker. Your log stays on this phone.">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" id="theme" content="#F7C600">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Plates">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="big-shoulders-display-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="barlow-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css?v=__BUILD__">
+</head>
+<body>
+<div id="app">
+  <div id="top" hidden></div>
+  <main id="main"><div class="load"><div class="wordmark">Plates</div></div></main>
+  <div id="nextbar" hidden>
+    <div class="nx"><span id="nx-ex"></span><span id="nx-sub"></span></div>
+    <button class="btn btn-pri" id="nx-btn" data-a="logNext">Log set</button>
+  </div>
+  <div id="timerbar" role="timer" aria-label="Rest timer">
+    <div class="fill" id="t-fill"></div>
+    <div class="tb">
+      <div class="tnum" id="t-num">0:00</div>
+      <div class="tlab" id="t-lab"></div>
+      <button class="btn btn-sm" data-a="tAdj" data-d="-15" aria-label="15 seconds less">&minus;15</button>
+      <button class="btn btn-sm" data-a="tAdj" data-d="15" aria-label="15 seconds more">+15</button>
+      <button class="btn btn-sm" data-a="tStop">Skip</button>
+    </div>
+  </div>
+  <nav id="tabs" aria-label="Sections" hidden></nav>
+</div>
+<div id="sheet"></div>
+<div id="toast" aria-live="polite"></div>
+<input type="file" id="restore-file" data-i="restoreFile" hidden>
+<noscript><p style="padding:24px;font-family:sans-serif">Plates needs JavaScript turned on.</p></noscript>
+<script src="app.js?v=__BUILD__"></script>
+</body>
+</html>

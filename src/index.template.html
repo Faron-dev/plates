@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plates Workout Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/*CSS*/
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="top" hidden></div>
+  <main id="main"><div class="load"><div class="wordmark">Plates</div><p class="muted">Loading your log</p></div></main>
+  <div id="nextbar" hidden>
+    <div class="nx"><span id="nx-ex"></span><span id="nx-sub"></span></div>
+    <button class="btn btn-pri" id="nx-btn" data-a="logNext">Log set</button>
+  </div>
+  <div id="timerbar" role="timer" aria-label="Rest timer">
+    <div class="fill" id="t-fill"></div>
+    <div class="tb">
+      <div class="tnum" id="t-num">0:00</div>
+      <div class="tlab" id="t-lab"></div>
+      <button class="btn btn-sm" data-a="tAdj" data-d="-15" aria-label="15 seconds less">&minus;15</button>
+      <button class="btn btn-sm" data-a="tAdj" data-d="15" aria-label="15 seconds more">+15</button>
+      <button class="btn btn-sm" data-a="tStop">Skip</button>
+    </div>
+  </div>
+  <nav id="tabs" aria-label="Sections" hidden></nav>
+</div>
+<div id="sheet"></div>
+<div id="toast" aria-live="polite"></div>
+<script>
+"use strict";
+/*JS*/
+</script>
+</body>
+</html>
